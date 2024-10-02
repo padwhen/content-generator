@@ -1,15 +1,17 @@
-
-import { Route, Routes } from 'react-router-dom'
-import { IndexPage } from './IndexPage'
-import { Layout } from './Layout'
+import { Route, Routes, useLocation } from "react-router-dom"
+import { Layout } from "./Layout"
+import { IndexPage } from "./IndexPage"
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route index element={<IndexPage />} />
-      </Route>
-    </Routes>
+    <>
+      {location.pathname.startsWith('/') && <Layout />}
+      <Routes>
+          <Route index element={<IndexPage />} />
+      </Routes>
+    </>
   )
 }
 
