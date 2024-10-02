@@ -22,5 +22,3 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm install
-      - name: Build Vite App
-        run: npm run build

@@ -44,7 +44,7 @@ export const SocialMediaContentGenerator = () => {
 
     return (
         <div className="flex">
-            <div className="p-4 bg-pink-100">
+            <div className="p-4 ">
                 <h1 className="text-3xl font-bold mb-6 text-pink-700">Social Media Content Generator</h1>
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <SelectionBox 
@@ -97,11 +97,11 @@ export const SocialMediaContentGenerator = () => {
                     </div>
                     <div>
                         <Label htmlFor="metrics" className="text-lg font-semibold">7. Performance Metrics</Label>
-                        <Textarea id="metrics" placeholder="Define how you will measure the success of your content" value={metrics} onChange={(e) => setMetrics(e.target.value)} className="mt-1" />
+                        <Textarea id="metrics" placeholder="Define how you will measure the success of your content" value={metrics} onChange={(e) => setMetrics(e.target.value)} className="mt-1 bg-black-20" />
                     </div>
                     <div>
                         <Label htmlFor="metrics" className="text-lg font-semibold">8. Short Description of your Product (required)</Label>
-                        <Textarea id="metrics" placeholder="Write a short description of your product" value={description} onChange={(e) => setDescription(e.target.value)} className="mt-1" />
+                        <Textarea id="metrics" placeholder="Write a short description of your product" value={description} onChange={(e) => setDescription(e.target.value)} className="mt-1 bg-black-20" />
                     </div>
                     {errors.length > 0 && (
                         <Alert variant="destructive">
