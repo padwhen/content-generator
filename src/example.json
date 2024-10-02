@@ -1,0 +1,106 @@
+{
+      "name": "Vitamin C Candy Madness",
+      "duration": "3 weeks",
+      "start_date": "2024-10-07",
+      "platforms": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "target_audience": [
+        "Students",
+        "Adults"
+      ],
+      "tone_and_style": "Funny, Hilarious",
+      "industry": "Food",
+      "product_description": "A new type of candy with vitamin C to cure cancer.",
+      "content_schedule": [
+        {
+          "week": 1,
+          "posts": [
+            {
+              "date": "2024-10-07",
+              "platform": "Facebook",
+              "content": "Ever heard of candy that can cure cancer? Well, now you have! 🍬💊 Introducing our new Vitamin C candy! Because who says you can't have your sweets and save the world at the same time? 😂 #SweetSaviors",
+              "cta": "Try it now!",
+              "action": "Create a fun graphic highlighting the candy with a catchy tagline."
+            },
+            {
+              "date": "2024-10-08",
+              "platform": "Instagram",
+              "content": "This is NOT your grandma's vitamin C! 😂✨ Check out our new candy that packs a punch with a side of laughter! Who knew health could be this delicious? 🍭 #CandyGoals",
+              "cta": "Grab yours today!",
+              "action": "Take a colorful photo of the candy and use a playful filter to enhance it."
+            },
+            {
+              "date": "2024-10-09",
+              "platform": "TikTok",
+              "content": "Watch me try to eat my way to good health! 🍬💪 #VitaminCCandyChallenge - Can you handle the sweetness? 😂",
+              "cta": "Tag a friend to join the challenge!",
+              "action": "Film a TikTok with your colleague eating this candy and become stronger!"
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "posts": [
+            {
+              "date": "2024-10-14",
+              "platform": "Facebook",
+              "content": "Curing cancer one candy at a time! Who knew saving the world could be this sweet? 🍬❤️ Join the candy revolution! #CandyForACause",
+              "cta": "Order your sweet cure now!",
+              "action": "Post a poll asking fans if they believe candy can cure cancer."
+            },
+            {
+              "date": "2024-10-15",
+              "platform": "Instagram",
+              "content": "Vitamin C candy: because life is too short to eat boring things! 😂🍭 Are you ready to add some fun to your health routine? #HealthGoals",
+              "cta": "Swipe up to order!",
+              "action": "Create a carousel post showing different ways to enjoy the candy."
+            },
+            {
+              "date": "2024-10-16",
+              "platform": "TikTok",
+              "content": "Can candy really cure cancer? Watch me test this theory with a sweet twist! 🍬💊😂 #CandyScience",
+              "cta": "Follow for more hilarious experiments!",
+              "action": "Invite followers to duet the video with their own candy experiences."
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "posts": [
+            {
+              "date": "2024-10-21",
+              "platform": "Facebook",
+              "content": "Why did the candy cross the road? To cure cancer, of course! 😂🍬 Join the fun and taste the health benefits today! #CureWithCandy",
+              "cta": "Try it and let us know what you think!",
+              "action": "Share a testimonial from someone who tried the candy and loved it."
+            },
+            {
+              "date": "2024-10-22",
+              "platform": "Instagram",
+              "content": "It's time to level up your candy game! Who's ready to taste the sweetest cure? 🍭❤️ #VitaminCCandy",
+              "cta": "Get yours before it's gone!",
+              "action": "Run a giveaway where followers can tag friends to win a candy pack."
+            },
+            {
+              "date": "2024-10-23",
+              "platform": "TikTok",
+              "content": "What happens when you mix candy with health? You get a laugh and a sugar rush! 😂🍬💊 #VitaminCChallenge",
+              "cta": "Duet this and show us your candy face!",
+              "action": "Create a challenge for followers to show their funniest candy face."
+            }
+          ]
+        }
+      ],
+      "performance_metrics": {
+        "goal": "Maximize trials of the product",
+        "metrics": [
+          "Engagement Rate",
+          "Clicks on CTA",
+          "Shares and Tags",
+          "Product Trials and Feedback"
+        ]
+      }
+}
