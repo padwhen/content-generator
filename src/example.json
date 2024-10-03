@@ -1,106 +1,101 @@
 {
-      "name": "Vitamin C Candy Madness",
-      "duration": "3 weeks",
-      "start_date": "2024-10-07",
-      "platforms": [
-        "Facebook",
-        "Instagram",
-        "TikTok"
-      ],
-      "target_audience": [
-        "Students",
-        "Adults"
-      ],
-      "tone_and_style": "Funny, Hilarious",
-      "industry": "Food",
-      "product_description": "A new type of candy with vitamin C to cure cancer.",
-      "content_schedule": [
-        {
-          "week": 1,
-          "posts": [
+    "Campaign": {
+        "name": "Padwhen Jersey Launch",
+        "duration": "4 weeks",
+        "start_date": "2023-11-01",
+        "platforms": [
+            "facebook",
+            "instagram",
+            "twitter"
+        ],
+        "target_audience": [
+            "adults",
+            "adolescents",
+            "seniors",
+            "students",
+            "men",
+            "sports_fans"
+        ],
+        "tone_and_style": "humorous, optimistic, casual",
+        "industry": "Football, Fashion",
+        "product_description": "Introducing the new edition of the Padwhen Football Club jersey, designed in collaboration with Kpop sensation NMIXX! Wear it with pride and show your support like never before. #LetsFUCKINGpadwhen",
+        "content_schedule": [
             {
-              "date": "2024-10-07",
-              "platform": "Facebook",
-              "content": "Ever heard of candy that can cure cancer? Well, now you have! 🍬💊 Introducing our new Vitamin C candy! Because who says you can't have your sweets and save the world at the same time? 😂 #SweetSaviors",
-              "cta": "Try it now!",
-              "action": "Create a fun graphic highlighting the candy with a catchy tagline."
+                "week": 1,
+                "posts": [
+                    {
+                        "date": "2023-11-01",
+                        "platform": "facebook",
+                        "content": "Get ready to level up your look! The new Padwhen jersey is here, and it's hotter than ever! 🔥 #LetsFUCKINGpadwhen",
+                        "cta": "Check it out now!",
+                        "action": "link to product page"
+                    },
+                    {
+                        "date": "2023-11-02",
+                        "platform": "instagram",
+                        "content": "Score big with style! 🏆 Rock the new Padwhen jersey and let everyone know who you support! #LetsFUCKINGpadwhen",
+                        "cta": "Shop the collection!",
+                        "action": "link to product page"
+                    }
+                ]
             },
             {
-              "date": "2024-10-08",
-              "platform": "Instagram",
-              "content": "This is NOT your grandma's vitamin C! 😂✨ Check out our new candy that packs a punch with a side of laughter! Who knew health could be this delicious? 🍭 #CandyGoals",
-              "cta": "Grab yours today!",
-              "action": "Take a colorful photo of the candy and use a playful filter to enhance it."
+                "week": 2,
+                "posts": [
+                    {
+                        "date": "2023-11-08",
+                        "platform": "twitter",
+                        "content": "Fashion meets football with our brand new jersey! Join the Padwhen family today! #LetsFUCKINGpadwhen 🥳",
+                        "cta": "Get yours now!",
+                        "action": "link to product page"
+                    },
+                    {
+                        "date": "2023-11-09",
+                        "platform": "facebook",
+                        "content": "Who’s excited for the game? 🔥 Show your passion with the new Padwhen jersey, available for all fans! #LetsFUCKINGpadwhen",
+                        "cta": "Order yours today!",
+                        "action": "link to product page"
+                    }
+                ]
             },
             {
-              "date": "2024-10-09",
-              "platform": "TikTok",
-              "content": "Watch me try to eat my way to good health! 🍬💪 #VitaminCCandyChallenge - Can you handle the sweetness? 😂",
-              "cta": "Tag a friend to join the challenge!",
-              "action": "Film a TikTok with your colleague eating this candy and become stronger!"
+                "week": 3,
+                "posts": [
+                    {
+                        "date": "2023-11-15",
+                        "platform": "instagram",
+                        "content": "Join the movement with the new Padwhen jersey! Fashion is part of the game. ⚽️ #LetsFUCKINGpadwhen",
+                        "cta": "Don’t miss out!",
+                        "action": "link to product page"
+                    },
+                    {
+                        "date": "2023-11-16",
+                        "platform": "twitter",
+                        "content": "Team spirit just got a stylish upgrade! 🏅 Grab your Padwhen jersey and show off your pride! #LetsFUCKINGpadwhen",
+                        "cta": "Shop now!",
+                        "action": "link to product page"
+                    }
+                ]
+            },
+            {
+                "week": 4,
+                "posts": [
+                    {
+                        "date": "2023-11-22",
+                        "platform": "facebook",
+                        "content": "Last chance to grab the limited edition Padwhen jersey! Don’t be the one left out! #LetsFUCKINGpadwhen",
+                        "cta": "Get yours before it's gone!",
+                        "action": "link to product page"
+                    },
+                    {
+                        "date": "2023-11-23",
+                        "platform": "instagram",
+                        "content": "Celebrate victory in style! 💥 Be part of the Padwhen family with our fresh jersey! #LetsFUCKINGpadwhen",
+                        "cta": "Claim yours today!",
+                        "action": "link to product page"
+                    }
+                ]
             }
-          ]
-        },
-        {
-          "week": 2,
-          "posts": [
-            {
-              "date": "2024-10-14",
-              "platform": "Facebook",
-              "content": "Curing cancer one candy at a time! Who knew saving the world could be this sweet? 🍬❤️ Join the candy revolution! #CandyForACause",
-              "cta": "Order your sweet cure now!",
-              "action": "Post a poll asking fans if they believe candy can cure cancer."
-            },
-            {
-              "date": "2024-10-15",
-              "platform": "Instagram",
-              "content": "Vitamin C candy: because life is too short to eat boring things! 😂🍭 Are you ready to add some fun to your health routine? #HealthGoals",
-              "cta": "Swipe up to order!",
-              "action": "Create a carousel post showing different ways to enjoy the candy."
-            },
-            {
-              "date": "2024-10-16",
-              "platform": "TikTok",
-              "content": "Can candy really cure cancer? Watch me test this theory with a sweet twist! 🍬💊😂 #CandyScience",
-              "cta": "Follow for more hilarious experiments!",
-              "action": "Invite followers to duet the video with their own candy experiences."
-            }
-          ]
-        },
-        {
-          "week": 3,
-          "posts": [
-            {
-              "date": "2024-10-21",
-              "platform": "Facebook",
-              "content": "Why did the candy cross the road? To cure cancer, of course! 😂🍬 Join the fun and taste the health benefits today! #CureWithCandy",
-              "cta": "Try it and let us know what you think!",
-              "action": "Share a testimonial from someone who tried the candy and loved it."
-            },
-            {
-              "date": "2024-10-22",
-              "platform": "Instagram",
-              "content": "It's time to level up your candy game! Who's ready to taste the sweetest cure? 🍭❤️ #VitaminCCandy",
-              "cta": "Get yours before it's gone!",
-              "action": "Run a giveaway where followers can tag friends to win a candy pack."
-            },
-            {
-              "date": "2024-10-23",
-              "platform": "TikTok",
-              "content": "What happens when you mix candy with health? You get a laugh and a sugar rush! 😂🍬💊 #VitaminCChallenge",
-              "cta": "Duet this and show us your candy face!",
-              "action": "Create a challenge for followers to show their funniest candy face."
-            }
-          ]
-        }
-      ],
-      "performance_metrics": {
-        "goal": "Maximize trials of the product",
-        "metrics": [
-          "Engagement Rate",
-          "Clicks on CTA",
-          "Shares and Tags",
-          "Product Trials and Feedback"
         ]
-      }
+    }
 }

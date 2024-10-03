@@ -8,6 +8,8 @@ import { Slider } from "@/components/ui/slider";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { generateContent } from "@/GenerateContent";
+import { v4 as uuidv4 } from 'uuid';
 
 export const SocialMediaContentGenerator = () => {
     const [platforms, setPlatforms] = useState<string[]>([]);
@@ -19,8 +21,29 @@ export const SocialMediaContentGenerator = () => {
     const [metrics, setMetrics] = useState<string>("");
     const [description, setDescription] = useState<string>("");
     const [errors, setErrors] = useState<string[]>([]);
+
+    const ENDPOINT = import.meta.env.VITE_ENDPOINT
+
+    const updateCampaignStructure = (parsedResponse: any) => {
+        const userId = localStorage.getItem('userId')
+        const campaignId = uuidv4()
+        return {
+            id: campaignId,
+            userId: userId,
+            Campaign: {
+                ...parsedResponse.Campaign,
+                content_schedule: parsedResponse.Campaign.content_schedule.map((week: any) => ({
+                    ...week,
+                    posts: week.posts.map((post: any) => ({
+                        ...post,
+                        done: false
+                    }))
+                }))
+            }
+        }
+    }
     
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         const newErrors: string[] = []
 
@@ -38,7 +61,25 @@ export const SocialMediaContentGenerator = () => {
         }
         setErrors(newErrors)
         if (newErrors.length === 0) {
-            console.log({ platforms, audiences, tones, industry, includeCTA, frequency, metrics });
+            const response_json = await generateContent({ platforms, audiences, tones, industry, includeCTA, frequency, metrics, description })
+            if (response_json !== null) {
+                const parsedResponse = JSON.parse(response_json)
+                const updatedResponse = updateCampaignStructure(parsedResponse)
+                console.log(updatedResponse)
+                try {
+                    const response = await fetch(ENDPOINT, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(updatedResponse)
+                    })
+                    const responseData = await response.json();
+                    console.log('Campaign created:', responseData);
+                } catch (error) {
+                    console.log(error)
+                }
+            }
         }
     }
 

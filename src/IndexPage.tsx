@@ -12,7 +12,7 @@ export const IndexPage = () => {
             <div className="w-3/4 rounded-lg m-5 bg-gradient-to-r from-pink-200 via-pink-150 to-pink-100">
                 <SocialMediaContentGenerator />
             </div>
-            <div className="w-1/4 flex flex-col p-6 overflow-y-auto bg-pink-100">
+            <div className="w-1/4 flex flex-col mt-5 p-6 overflow-y-auto bg-pink-100">
                 <div className="mb-6">
                     <h2 className="text-xl font-bold mb-4 text-pink-700">Upcoming Tasks🩷</h2>
                     <div className="space-y-3">
@@ -30,8 +30,6 @@ export const IndexPage = () => {
                 </div>
                 <div className="flex flex-col space-y-2">
                     <h2 className="text-xl font-bold mb-4 text-pink-700">History🩷</h2>
-                    <TestPage />
-                    <TestPage />
                     <TestPage />
                 </div>
             </div>
