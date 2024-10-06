@@ -17,12 +17,11 @@ const Header = () => {
   useEffect(() => {
     checkUser()
   }, [])
-
-  console.log(user)
   
   async function checkUser() {
       const currentUser = await getCurrentUser()
       setUser(currentUser);
+      localStorage.set('userId', user?.userId)
   }  
   return (
     <header className="bg-pink-500 text-white p-4 flex justify-between items-center">
