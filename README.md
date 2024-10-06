@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# Social Media Content Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The **Social Media Content Generator** is a React-based application that automates social media content creation using OpenAI's API. It seamlessly integrates with social media platforms such as Facebook, Instagram, and Twitter, allowing users to generate, customize, and publish posts directly from the app. 
 
-Currently, two official plugins are available:
+The app is secured using AWS Amplify Authentication with role-based access control provided by AWS IAM. Serverless functions, written in Python, handle backend operations using AWS Lambda and AWS API Gateway to perform CRUD operations on an AWS RDS (MySQL) database.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Video Demo
 
-## Expanding the ESLint configuration
+https://github.com/user-attachments/assets/d8c36846-4c72-439d-a563-8a72f1d9333c
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
+- **Content Generation**: Automatically generate content based on user input using OpenAI's API.
+- **Social Media Integration**: Post directly to Facebook, Instagram, and Twitter through integrated APIs.
+- **User Authentication**: Secured authentication using AWS Amplify and AWS IAM for role-based access control.
+- **Serverless Backend**: Perform scalable CRUD operations via AWS Lambda (Python) and AWS API Gateway.
+- **Database**: AWS RDS (MySQL) used for storing user data and campaign history.
+- **Testing**: Unit tests with Jest and end-to-end testing with Cypress to ensure functionality and robustness.
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack
+- **Frontend**: TypeScript, React, Node.js
+- **Backend**: AWS Lambda (Python), AWS API Gateway
+- **Database**: AWS RDS (MySQL)
+- **Authentication**: AWS Amplify Auth, AWS IAM
+- **APIs**: OpenAI API, Facebook API, Instagram API, Twitter API
+- **Testing**: Jest (Unit Tests), Cypress (End-to-End Tests)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## New Things I Learned
+- **AWS Amplify Authentication:** Implemented user authentication and role-based access control, learning how to configure user pools and manage authentication flows.
+- **Social Media API Integration:** Gained experience working with multiple APIs (Facebook, Instagram, Twitter) to allow users to post content directly from the app.
+- **AWS Lambda & API Gateway:** Improved my understanding of building serverless functions in Python and linking them with API Gateway for secure CRUD operations.
