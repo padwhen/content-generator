@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 import { AuthUser, getCurrentUser } from 'aws-amplify/auth';
 import { Dialog, DialogContent, DialogTrigger } from './components/ui/dialog';
 import { Authenticator } from '@aws-amplify/ui-react';
+import { Select, SelectContent, SelectItem, SelectTrigger } from './components/ui/select';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './components/ui/dropdown-menu';
 
 Amplify.configure(outputs);
 
@@ -34,10 +36,17 @@ const Header = () => {
             <Button variant="ghost" size="icon">
               <Bell className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="sm" className="flex items-center space-x-2">
-              <User className="h-5 w-5" />
-              <span>{user.signInDetails?.loginId}</span>
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2">
+                  <User className="h-5 w-5" />
+                  <span>{user.signInDetails?.loginId}</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem className='bg-pink-200'>Log Out</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </>
         ) : (
           <Dialog open={isOpen} onOpenChange={setIsOpen}>
