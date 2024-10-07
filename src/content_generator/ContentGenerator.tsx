@@ -10,6 +10,9 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { generateContent } from "@/GenerateContent";
 import { v4 as uuidv4 } from 'uuid';
+import { useToast } from "@/hooks/use-toast";
+import { Loader } from "lucide-react";
+import { fetchCampaigns } from "@/TestPage";
 
 export const SocialMediaContentGenerator = () => {
     const [platforms, setPlatforms] = useState<string[]>([]);
@@ -21,8 +24,13 @@ export const SocialMediaContentGenerator = () => {
     const [metrics, setMetrics] = useState<string>("");
     const [description, setDescription] = useState<string>("");
     const [errors, setErrors] = useState<string[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+
+    const userId = localStorage.getItem('userId')
 
     const ENDPOINT = import.meta.env.VITE_ENDPOINT
+
+    const { toast } = useToast()
 
     const updateCampaignStructure = (parsedResponse: any) => {
         const userId = localStorage.getItem('userId')
@@ -61,11 +69,11 @@ export const SocialMediaContentGenerator = () => {
         }
         setErrors(newErrors)
         if (newErrors.length === 0) {
+            setIsLoading(true)
             const response_json = await generateContent({ platforms, audiences, tones, industry, includeCTA, frequency, metrics, description })
             if (response_json !== null) {
                 const parsedResponse = JSON.parse(response_json)
                 const updatedResponse = updateCampaignStructure(parsedResponse)
-                console.log(updatedResponse)
                 try {
                     const response = await fetch(ENDPOINT, {
                         method: 'POST',
@@ -74,10 +82,29 @@ export const SocialMediaContentGenerator = () => {
                         },
                         body: JSON.stringify(updatedResponse)
                     })
-                    const responseData = await response.json();
-                    console.log('Campaign created:', responseData);
+                    await response.json();
+                    toast({
+                        title: `${updatedResponse.Campaign.name} created!`,
+                    })
+                    // Clear all inputs
+                    setPlatforms([]);
+                    setAudiences([]);
+                    setTones([]);
+                    setIndustry("");
+                    setIncludeCTA(false);
+                    setFrequency(1);
+                    setMetrics("");
+                    setDescription("");
+                    await fetchCampaigns(userId)
+                    // Scroll to the top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 3000);
                 } catch (error) {
                     console.log(error)
+                } finally {
+                    setIsLoading(false)
                 }
             }
         }
@@ -155,8 +182,15 @@ export const SocialMediaContentGenerator = () => {
                             </AlertDescription>
                         </Alert>
                     )}
-                    <Button type="submit" className="w-full bg-pink-600 hover:bg-pink-700 text-white">
-                        Generate Content
+                    <Button type="submit" className="w-full bg-pink-600 hover:bg-pink-700 text-white" disabled={isLoading}>
+                        {isLoading ? (
+                            <>
+                                <Loader className="mr-2 h-4 w-4 animate-spin" />
+                                Generating...
+                            </>
+                        ) : (
+                            'Generate Content'
+                        )}
                     </Button>
                 </form>
             </div>
